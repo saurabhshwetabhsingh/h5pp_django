@@ -1,0 +1,30 @@
+{
+  "semantics": [
+    {
+      "englishLabel": "Task description",
+      "label": "Beskrivelse av oppgaven",
+      "englishDescription": "Describe how the user should solve the task.",
+      "description": "Beskriv hva brukeren må gjøre for å løse oppgaven."
+    },
+    {
+      "englishLabel": "Solution image",
+      "label": "Bilde",
+      "englishDescription": "Users will guess the solution from this picture.",
+      "description": "Brukeren vil gjette løsningen ut fra dette bildet."
+    },
+    {
+      "englishLabel": "Descriptive solution label",
+      "label": "Etikett for løsningsknapp",
+      "englishDefault": "Click to see the answer.",
+      "default": "Klikk for å se svar",
+      "englishDescription": "Clickable text area where the solution will be displayed.",
+      "description": "Knapp som vil vise løsningen."
+    },
+    {
+      "englishLabel": "Solution text",
+      "label": "Løsningstekst",
+      "englishDescription": "The solution for the picture.",
+      "description": "Løsningen på oppgaven gitt av beskrivelse og bildet."
+    }
+  ]
+}

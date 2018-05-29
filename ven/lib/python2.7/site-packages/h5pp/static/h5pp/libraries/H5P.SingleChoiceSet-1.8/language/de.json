@@ -1,0 +1,92 @@
+{
+  "semantics": [
+    {
+      "label": "Liste der Fragen",
+      "entity": "frage",
+      "field": {
+        "label": "Frage & Alternativen",
+        "fields": [
+          {
+            "label": "Frage"
+          },
+          {
+            "label": "Alternativen - die erste Alternative ist die Richtige.",
+            "entity": "antwort",
+            "field": {
+              "label": "Alternative"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "fields": [
+        {
+          "label": "Timeout bei korrekten Antworten",
+          "description": "Wert in Millisekunden"
+        },
+        {
+          "label": "Timeout bei falschen Antworten",
+          "description": "Wert in Millisekunden"
+        },
+        {
+          "label": "Soundeffekte einschalten"
+        },
+        {
+          "label": "\"Wiederholen\"-Button anzeigen"
+        },
+        {
+          "label": "\"Lösung zeigen\"-Button anzeigen"
+        },
+        {
+          "label": "Pass percentage",
+          "description": "Percentage of Total score required for passing the quiz."
+        }
+      ]
+    },
+    {
+      "label": "Sprachanpassungen für Single-Choice-Set",
+      "fields": [
+        {
+          "label": "Titel für das Ergebnisschaubild",
+          "default": "Du hast :numcorrect von :maxscore richtig beantwortet",
+          "description": ":numcorrect wird durch die Anzahl der richtigen Antworten ersetzt und :maxscore durch die Anzahl der Fragen"
+        },
+        {
+          "label": "Beschriftung für den \"Lösung zeigen\"-Button",
+          "default": "Lösung zeigen"
+        },
+        {
+          "label": "Beschriftung für den \"Wiederholen\"-Button",
+          "default": "Wiederholen"
+        },
+        {
+          "label": "Titel für die Lösungsansicht",
+          "default": "Lösung"
+        },
+        {
+          "label": "\"Readspeaker\"-Text für eine richtige Antwort",
+          "default": "Korrekt!"
+        },
+        {
+          "label": "\"Readspeaker\"-Text für eine falsche Antwort",
+          "default": "Falsch!"
+        },
+        {
+          "label": "Beschriftung für den \"Stumm\"-Button, um den Ton auszustellen",
+          "default": "Stumm schalten"
+        },
+        {
+          "label": "Beschriftung für den \"Schließen\"-Knopf",
+          "default": "Schließen"
+        },
+        {
+          "label": "Text für die Nummer des Schaubilds",
+          "description": "Gibt das aktuelle Schaubild und die Gesamtzahl der Schaubilder an, Variablen sind :num und :total",
+          "default": "Schaubild :num von :total"
+        }
+      ]
+    }
+  ]
+}

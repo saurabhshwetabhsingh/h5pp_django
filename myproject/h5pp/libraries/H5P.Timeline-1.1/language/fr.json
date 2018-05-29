@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Titre",
+          "description": "Ecrivez ici le titre principal de la frise chronologique (première page)"
+        },
+        {
+          "label": "Texte d'introducion",
+          "description": "Ecrivez ici le contenu principal de la frise chronologique (première page)."
+        },
+        {
+          "label": "Niveau de zoom par défaut",
+          "description": "Cela altèrera le niveau de zoom par défaut. Cela revient à utiliser les boutons pour zoomer ou dézoomer. Un nombre négatif permet de dézoomer. Par défaut, la valeur est 0."
+        },
+        {
+          "label": "Image d'arrière-plan'",
+          "description": "Affiche une image de fond."
+        },
+        {
+          "label": "Hauteur",
+          "description": "La hauteur en pixels"
+        },
+        {
+          "label": "Média",
+          "description": "Ici vous pouvez ajouter un média à la \"page de garde\" de votre frise chronologique.",
+          "fields": [
+            {
+              "label": "Fichier média",
+              "description": "Lien vers l'URL du fichier média (Twitter, YouTube, Flickr, Vimeo, Google Maps et SoundCloud sont autorisés à l'heure actuelle)"
+            },
+            {
+              "label": "Crédits",
+              "description": "Crédits du fichier média"
+            },
+            {
+              "label": "Légende",
+              "description": "Saisissez ici la légende du fichier média"
+            }
+          ]
+        },
+        {
+          "label": "Dates",
+          "description": "Ajoutez des dates à votre frise chronologique !",
+          "field": {
+            "label": "Date",
+            "description": "Date",
+            "fields": [
+              {
+                "label": "Date de début",
+                "description": "YYYY,MM,DD (Minimum YYYY obligatoire)",
+                "regexp": {}
+              },
+              {
+                "label": "Date de fin",
+                "description": "YYYY,MM,DD (Minimum YYYY obligatoire)",
+                "regexp": {}
+              },
+              {
+                "label": "Titre",
+                "description": "Titre de l'événement"
+              },
+              {
+                "label": "Contenu",
+                "description": "Contenu de l'événement"
+              },
+              {
+                "label": "Etiquettes",
+                "description": "Saisissez les étiquettes (catégories)"
+              },
+              {
+                "label": "Média",
+                "description": "",
+                "fields": [
+                  {
+                    "label": "Fichier média",
+                    "description": "Lien vers l'URL du fichier média (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps et SoundCloud sont autorisés à l'heure actuelle)."
+                  },
+                  {
+                    "label": "Image miniature",
+                    "description": "Ajoutez au besoin une miniature 32x32"
+                  },
+                  {
+                    "label": "Crédits",
+                    "description": "Crédits du fichier média"
+                  },
+                  {
+                    "label": "Légende",
+                    "description": "Légende du fichier média"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Périodes",
+          "description": "Ajoutez une période à votre frise chronologique",
+          "field": {
+            "label": "Période",
+            "description": "",
+            "fields": [
+              {
+                "label": "Date de début",
+                "description": "YYYY,MM,DD (Minimum YYYY obligatoire)",
+                "regexp": {}
+              },
+              {
+                "label": "Date de fin",
+                "description": "YYYY,MM,DD (Minimum YYYY obligatoire)",
+                "regexp": {}
+              },
+              {
+                "label": "Titre",
+                "description": "Titre de la période"
+              },
+              {
+                "label": "Contenu",
+                "description": "Contenu de la période"
+              },
+              {
+                "label": "Etiquette",
+                "description": "Etiquettes de la période (catégories)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Langue",
+          "description": "Choisissez la langue de l'interface",
+          "options": [
+            {
+              "label": "Africain"
+            },
+            {
+              "label": "Arabe"
+            },
+            {
+              "label": "Arménien"
+            },
+            {
+              "label": "Basque"
+            },
+            {
+              "label": "Bulgare"
+            },
+            {
+              "label": "Catalan"
+            },
+            {
+              "label": "Chinois"
+            },
+            {
+              "label": "Croate/ Hrvatski"
+            },
+            {
+              "label": "Tchèque"
+            },
+            {
+              "label": "Danois"
+            },
+            {
+              "label": "Allemand"
+            },
+            {
+              "label": "Anglais"
+            },
+            {
+              "label": "English (24-hour time)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonien"
+            },
+            {
+              "label": "Faroese"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finnois"
+            },
+            {
+              "label": "Français"
+            },
+            {
+              "label": "Galice"
+            },
+            {
+              "label": "Géorgien"
+            },
+            {
+              "label": "Allemand / Deutsch"
+            },
+            {
+              "label": "Grec"
+            },
+            {
+              "label": "Hébreu"
+            },
+            {
+              "label": "Hongrois"
+            },
+            {
+              "label": "Icelandais"
+            },
+            {
+              "label": "Indonésien"
+            },
+            {
+              "label": "Italien"
+            },
+            {
+              "label": "Japonais"
+            },
+            {
+              "label": "Coréen"
+            },
+            {
+              "label": "Latvian"
+            },
+            {
+              "label": "Lithuanien"
+            },
+            {
+              "label": "Luxembourgeois"
+            },
+            {
+              "label": "Malay"
+            },
+            {
+              "label": "Nepali"
+            },
+            {
+              "label": "Norvégien"
+            },
+            {
+              "label": "Polonais"
+            },
+            {
+              "label": "Portugais"
+            },
+            {
+              "label": "Portugais (Brésilien)"
+            },
+            {
+              "label": "Romanche"
+            },
+            {
+              "label": "Russe"
+            },
+            {
+              "label": "Serbe - Cyrillic"
+            },
+            {
+              "label": "Serbe - Latin"
+            },
+            {
+              "label": "Sinhalese"
+            },
+            {
+              "label": "Slovaque"
+            },
+            {
+              "label": "Slovénien"
+            },
+            {
+              "label": "Espagnol"
+            },
+            {
+              "label": "Suédois"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamoul"
+            },
+            {
+              "label": "Taiwanais"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turc"
+            },
+            {
+              "label": "Ukrainien"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

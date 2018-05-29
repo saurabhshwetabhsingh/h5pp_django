@@ -1,0 +1,9 @@
+{
+  "libraryStrings": {
+    "noImage": "Du må velge et bilde før du kan plassere målfelt.",
+    "done": "Ferdig",
+    "remove": "Slett målfelt",
+    "rectangle": "Lag rektangel",
+    "circle": "Lag sirkel"
+  }
+}

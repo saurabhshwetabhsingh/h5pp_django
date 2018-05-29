@@ -1,0 +1,37 @@
+{
+  "title": "Memory Game",
+  "description": "See how many cards you can remember!",
+  "majorVersion": 1,
+  "minorVersion": 2,
+  "patchVersion": 1,
+  "runnable": 1,
+  "author": "Amendor AS",
+  "license": "MIT",
+  "machineName": "H5P.MemoryGame",
+  "preloadedCss": [
+    {
+      "path": "memory-game.css"
+    }
+  ],
+  "preloadedJs": [
+    {
+      "path": "memory-game.js"
+    },
+    {
+      "path": "card.js"
+    },
+    {
+      "path": "counter.js"
+    },
+    {
+      "path": "popup.js"
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.Timer",
+      "majorVersion": 0,
+      "minorVersion": 4
+    }
+  ]
+}

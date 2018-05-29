@@ -1,0 +1,31 @@
+{
+  "semantics": [
+    {
+      "label": "Beschreibung für das Eingabefeld",
+      "description": "Beschreibung dafür, was der Nutzer eingeben soll"
+    },
+    {
+      "label": "Platzhaltertext",
+      "description": "Ein Platzhaltertext für den Nutzer"
+    },
+    {
+      "label": "Größe des Eingabefelds",
+      "description": "Die Größe des Eingabefelds in Form der Zeilenanzahl",
+      "options": [
+        {
+          "label": "1 Zeile"
+        },
+        {
+          "label": "3 Zeilen"
+        },
+        {
+          "label": "10 Zeilen"
+        }
+      ]
+    },
+    {
+      "label": "Erforlderliches Feld",
+      "description": "Anwählen, um Eingaben erforderlich zu machen. Der Nutzer muss alle erforderlichen Felder bearbeiten, um ein Dokument exportieren zu können."
+    }
+  ]
+}

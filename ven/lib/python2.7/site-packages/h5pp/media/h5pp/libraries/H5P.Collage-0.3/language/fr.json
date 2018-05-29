@@ -1,0 +1,53 @@
+{
+  "semantics": [
+    {
+      "label": "Aperçu",
+      "description": "Vous pouvez déplacer chaque image en la faisant glisser. Après avoir sélectionné une image, vous pouvez appuyer sur les touches + et - de votre clavier pour zoomer. Sinon, maintenez enfoncée la touche Z du clavier, tout en faisant rouler la molette de la souris.",
+      "fields": [
+        {
+          "label": "Modèle"
+        },
+        {
+          "label": "Options d'affichage",
+          "fields": [
+            {
+              "label": "Hauteur"
+            },
+            {
+              "label": "Espacement"
+            },
+            {
+              "label": "Cadre"
+            }
+          ]
+        },
+        {
+          "label": "Découpes",
+          "entity": "découpe",
+          "field": {
+            "label": "Découpe",
+            "fields": [
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Décalage (offset)",
+                "fields": [
+                  {
+                    "label": "En haut"
+                  },
+                  {
+                    "label": "A gauche"
+                  }
+                ]
+              },
+              {
+                "label": "Echelle"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

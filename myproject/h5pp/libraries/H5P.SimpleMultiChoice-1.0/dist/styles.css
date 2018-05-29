@@ -1,0 +1,49 @@
+.h5p-simple-multiple-choice-question {
+  background: #2880d0;
+  font-size: 1.2em;
+  padding: 0.75em;
+  color: #fff;
+}
+
+.h5p-simple-multiple-choice-question:before {
+  width: 0.75em;
+  height: 0.75em;
+  content: " ";
+  position: absolute;
+  bottom: -0.4em;
+  left: 1em;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.h5p-simple-multiple-choice-alternatives-error,
+.h5p-simple-multiple-choice-alternatives {
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+  position: relative;
+  background-color: #FFF;
+}
+
+.h5p-simple-multiple-choice-alternatives-error {
+  color: darkred;
+}
+
+.h5p-simple-multiple-choice-alternatives label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.75em;
+  display: block;
+}
+
+.h5p-simple-multiple-choice-alternative-li {
+  margin: 0.25em 0;
+}
+
+.h5p-simple-multiple-choice-alternative-input {
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  vertical-align: middle;
+}

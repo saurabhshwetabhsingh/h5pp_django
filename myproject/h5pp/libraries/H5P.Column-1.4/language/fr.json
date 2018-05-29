@@ -1,0 +1,36 @@
+{
+  "semantics": [
+    {
+      "englishLabel": "List of Column Content",
+      "label": "Liste des contenus empilés",
+      "englishEntity": "content",
+      "entity": "innhold",
+      "field": {
+        "fields": [
+          {
+            "englishLabel": "Content",
+            "label": "Contenu"
+          },
+          {
+            "englishLabel": "Separate content with a horizontal ruler",
+            "label": "Séparer le contenu avec un délimiteur horizontal",
+            "options": [
+              {
+                "englishLabel": "Automatic (default)",
+                "label": "Automatique (défaut)"
+              },
+              {
+                "englishLabel": "Never use ruler above",
+                "label": "Ne jamais afficher le séparateur au-dessus"
+              },
+              {
+                "englishLabel": "Always use ruler above",
+                "label": "Toujours afficher le séparateur au-dessus"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
