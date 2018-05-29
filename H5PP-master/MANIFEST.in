@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include h5pp/static *
+recursive-include h5pp/media *
+recursive-include h5pp/templates *
+recursive-include docs *
