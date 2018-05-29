@@ -102,7 +102,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# MEDIA_ROOT = '/home/shwetabh/Desktop/hp/myproject/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 H5P_DEV_MODE = 0
