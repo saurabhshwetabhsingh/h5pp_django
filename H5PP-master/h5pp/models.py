@@ -117,6 +117,11 @@ class h5p_contents(models.Model):
         help_text='Filtered version of json_contents')
     slug = models.CharField(null=False, max_length=127,
         help_text='Human readable content identifier that is unique')
+    community_id = models.CharField(null=True, max_length=127,
+        help_text='The community to which the content belongs')
+    community_name = models.CharField(null=True, max_length=127,
+        help_text='The name of the community')
+    
 
     class Meta:
         db_table = 'h5p_contents'

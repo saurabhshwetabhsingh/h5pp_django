@@ -6,7 +6,9 @@
 		<style>
 			.radio {
 				display: none;
+				background-color: #eee;
 			}
+
 		</style>
 	{% endif %}
 	<style type="text/css" media="all">
@@ -58,20 +60,32 @@
 		}
 	</script>
 {% endblock head %}
-{% block body %}
-<div class="wrap">
+<!-- {% block css %}
+<link href="{% static 'css/fileinput.min.css' %}" rel="stylesheet">
+{% endblock %} -->
+{% block breadcrumb %}
+<!-- {% if request.POST.articleof == "group" %}
+  <li class="breadcrumb-item active"><a href="{% url 'group_view' group.pk %}">{{group.name}} Group</a></li>
+{% endif %}
+{% if request.POST.articleof == "community" %}
+  <li class="breadcrumb-item active"><a href="{% url 'community_view' community.pk %}">{{community.name}} Community</a></li>
+{% endif %} -->
+  <li class="breadcrumb-item active">Create a H5P Content</li>
+{% endblock %}
+{% block content %}
+<div class="">
 	{% if not request.GET.is_iframe %}
-		<a href="{% url 'h5plistContents' %}"><span class="glyphicon glyphicon-arrow-left"></span> List of contents</a>
-		<h1 class="page-title">Editor</h1>
+		<!-- <a href="{% url 'h5plistContents' %}"><span class="glyphicon glyphicon-arrow-left"></span> List of contents</a> -->
+		<!-- <h1 class="page-title">Editor</h1> -->
 	{% endif %}
-	<div class="well">
-		{% if not request.GET.is_iframe %}
+	<div class="form-group">
+		<!-- {% if not request.GET.is_iframe %}
 
 			{% if not request.GET.title %}
 				<h4 class="section-title">Create new content</h4>
 				<div class="alert alert-success info">
 					<p>You can create or upload content with this editor :</p>
-						<ul><li><b>Create </b>: Start by giving it a <i>title</i>. Select <i>create</i> and choose a content type from the dropdown list. 
+						<ul><li><b>Create </b>: Start by giving it a <i>title</i>. Select <i>create</i> and choose a content type from the dropdown list.
 						The number of content types depends on the libraries installed.<br>If a tutorial is available for this content you can access to it (label <i>Tutorial available</i>)</li>
 
 						<li><b>Upload </b>: Start by giving it a <i>title</i>. Select <i>upload</i> and click on <i>Upload H5P Package</i> to upload your content. The content must be a <i>.h5p</i> file.</li></ul>
@@ -89,12 +103,12 @@
 					<p>When you're done, click on the <b>Save</b> button. You will be redirected to the viewing page of your content.</p>
 				</div>
 			{% endif %}
-		{% endif %}
+		{% endif %} -->
 		<form method="post" enctype="multipart/form-data" id="h5p-content-form">
 			{% csrf_token %}
 			<label for="id_title" class="label_form"><b>Title</b></label>
 			{{form.title}}
-			<div class="radio">
+			<div class="radio form-check">
 				<b>Action</b>
 				{{form.h5p_type}}
 			</div>
@@ -105,14 +119,20 @@
 			{{form.h5p_library}}
 			<br>
 			<div class="file-container editor">
+				<label for="id_h5p" tabindex="0"><b>Upload H5P Package</b></label>
 				{{ form.h5p }}
-				<label for="id_h5p" class="btn btn-default upload-h5p" tabindex="0">Upload H5P Package</label>
+				<!-- <div class="form-group custom-file">
+    		<label for="id_h5p">Upload H5P Package</label>
+    		<input type="file" name ="article_image" class="file" data-msg-placeholder="Select h5p content for upload...">
+  			</div> -->
 			</div>
 			<p class="file-return"></p>
 			{% if not request.GET.contentId %}
-				<input class="btn btn-default" type="submit" id="submit_editor" value="Save">
+			<!-- <p>ch1.................</p> -->
+				<input class="btn btn-primary" type="submit" id="submit_editor" value="Save">
 			{% else %}
-				<input class="btn btn-default" type="submit" id="submit_editor" value="Save">
+			<!-- <p>cn2;;;;;;;;;;;;;;;;;;;;</p> -->
+				<input class="btn btn-primary" type="submit" id="submit_editor" value="Save">
 			{% endif %}
 			{% if form.non_field_errors %}
 				<div class="alert alert-danger">
@@ -124,4 +144,4 @@
 		</form>
 	</div>
 </div>
-{% endblock body %}
+{% endblock content %}

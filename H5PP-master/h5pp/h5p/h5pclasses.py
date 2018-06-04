@@ -369,6 +369,8 @@ class H5PDjango:
         update.filtered = ''
         update.disable = content['disable']
         update.slug = slugify(content['title'])
+        update.community_id = content['community_id']
+        update.community_name = content['community_name']
         update.save()
 
         # Derive library data from string
@@ -398,7 +400,10 @@ class H5PDjango:
             author=content['author'],
             disable=content['disable'],
             filtered='',
-            slug=slugify(content['title']))
+            slug=slugify(content['title']),
+            community_id = content['community_id'],
+            community_name = content['community_name']
+            )
 
         event = H5PEvent('content', 'create', result.content_id, content['title'] if 'title' in content else '', content[
                          'library']['machineName'], str(content['library']['majorVersion']) + '.' + str(content['library']['minorVersion']))
