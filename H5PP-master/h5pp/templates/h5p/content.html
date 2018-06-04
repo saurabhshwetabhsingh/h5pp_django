@@ -27,16 +27,17 @@
 		H5PIntegration = {% autoescape off %} {{data.integration}} {% endautoescape %}
 	</script>
 {% endblock head %}
-{% block body %}
+{% block content %}
 {% if not request.GET.is_iframe %}
 <div class="wrap">
-	<a href="{% url 'h5plistContents' %}"><span class="glyphicon glyphicon-arrow-left"></span> List of contents</a>
-	<h3 class="page-title">{{request.GET.title}}</h3>
+	<!-- <a href="{% url 'h5plistContents' %}"><span class="glyphicon glyphicon-arrow-left"></span> List of contents</a> -->
+	<h3 class="breadcrumb-item-active">{{request.GET.title}}</h3>
 	<div class="well">
 		{% autoescape off %}
 			{{html}}
 		{% endautoescape %}
 		{% if request.user.is_authenticated %}
+		<br>
 			<div class="content-options">
 				{% if request.user.username == owner %}
 					<a href="{% url 'h5pedit' contentId=request.GET.contentId %}?title={{request.GET.title}}">
@@ -53,6 +54,6 @@
 {% else %}
 	{% autoescape off %}
 		{{html}}
-	{% endautoescape %}	
+	{% endautoescape %}
 {% endif %}
-{% endblock body %}
+{% endblock content %}
