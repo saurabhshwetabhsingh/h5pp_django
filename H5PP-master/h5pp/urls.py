@@ -1,5 +1,9 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib.auth.views import login, logout
+from h5pp import viewsets
+from rest_framework import routers
+router = routers.DefaultRouter()
+router.register(r'h5papi', viewsets.h5pcontentViewSet)
 
 app_name = 'h5pp'
 urlpatterns = [
@@ -9,6 +13,10 @@ urlpatterns = [
     # Authentification
     url(r'^login/', login, {'template_name': 'h5p/login.html'}, name='login'),
     url(r'^logout/', logout, {'next_page': '/h5p/home'}, name='logout'),
+    
+    #API
+    url(r'^', include(router.urls)),
+    url(r'^api/', include('rest_framework.urls', namespace='rest_framework')),
 
     # Contents and Libraries
     url(r'^libraries/$', 'h5pp.views.librariesView', name='h5plibraries'),
