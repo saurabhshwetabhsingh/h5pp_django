@@ -87,6 +87,8 @@ def h5pInsert(request, interface):
             'disable': request.POST['disable'],
             'library': lib,
             'author': request.user.username,
+            'community_id': request.POST['community_id'],
+            'community_name': request.POST['community_name'],
             'h5p_library': request.POST['h5p_library'] if 'h5p_library' in request.POST else None
         }, request.POST['nid'])
 
@@ -153,6 +155,8 @@ def h5pLoad(request):
         request.GET['filtered'] = content['filtered']
         request.GET['disable'] = content['disable']
         request.GET['h5p_slug'] = content['slug']
+        request.GET['community_id'] = content['community_name']
+        request.GET['community_name'] = content['community_name']
 
 
 def h5pView(request):
