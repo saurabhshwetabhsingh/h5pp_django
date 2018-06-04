@@ -44,14 +44,20 @@ def createView(request, contentId=None):
         if request.method == 'POST':
             if contentId != None:
                 request.POST['contentId'] = contentId
+            request.POST['community_id'] = request.session['cid']
+            cid = request.session['cid']
+            request.POST['community_name'] = request.session['cname']
+            del request.session['cid']
+            del request.session['cname']
             form = CreateForm(request, request.POST, request.FILES)
             if form.is_valid():
                 if contentId != None:
-                    return HttpResponseRedirect('/h5p/content/?contentId=' + contentId)
+                    return HttpResponseRedirect('http://localhost:7000/community_h5p_content/' + cid)
                 else:
                     newId = h5p_contents.objects.all(
                     ).order_by('-content_id')[0]
-                    return HttpResponseRedirect('/h5p/content/?contentId=' + str(newId.content_id))
+                    # return HttpResponseRedirect('/h5p/content/?contentId=' + str(newId.content_id))
+                    return HttpResponseRedirect('http://localhost:7000/community_h5p_content/' + cid)
             return render(request, 'h5p/create.html', {'form': form, 'data': editor})
 
         elif contentId != None:
