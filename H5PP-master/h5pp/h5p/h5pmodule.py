@@ -155,8 +155,8 @@ def h5pLoad(request):
         request.GET['filtered'] = content['filtered']
         request.GET['disable'] = content['disable']
         request.GET['h5p_slug'] = content['slug']
-        request.GET['community_id'] = content['community_name']
-        request.GET['community_name'] = content['community_name']
+        # request.GET['community_id'] = content['community_name']
+        # request.GET['community_name'] = content['community_name']
 
 
 def h5pView(request):
