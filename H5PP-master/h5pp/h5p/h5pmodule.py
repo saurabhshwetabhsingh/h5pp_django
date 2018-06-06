@@ -160,7 +160,11 @@ def h5pLoad(request):
         request.GET['filtered'] = content['filtered']
         request.GET['disable'] = content['disable']
         request.GET['h5p_slug'] = content['slug']
+<<<<<<< HEAD
         # request.GET['community_id'] = content['community_id']
+=======
+        # request.GET['community_id'] = content['community_name']
+>>>>>>> a09a848f693b889b6cea26dc2400c977294e1125
         # request.GET['community_name'] = content['community_name']
 
 

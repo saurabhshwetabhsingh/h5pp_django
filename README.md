@@ -18,6 +18,9 @@ Steps for installation :
 		 pip install pillow  
 		 pip install requests  
 		 pip install /the path to dist folder inside H5PP-master/  
+		 pip install djangorestframework==3.4  
+	         pip install markdown  
+		 pip install django-filter  
      After installing django create a super user..  
        In project's main directory,  
          python manage.py createsuperuser
