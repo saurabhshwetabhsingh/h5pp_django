@@ -60,7 +60,12 @@ def h5pInsert(request, interface):
     if 'h5p_upload' in request.POST:
         storage = interface.h5pGetInstance('storage')
         storage.savePackage(h5pGetContentId(request), None, False, {
-                            'disable': request.POST['disable'], 'title': request.POST['title']})
+                            'disable': request.POST['disable'],
+                            'title': request.POST['title'],
+                            'author': request.user.username,
+                            'community_id': request.POST['community_id'],
+                            'community_name': request.POST['community_name']}
+                            )
     else:
         if not 'name' in request.POST['main_library']:
             lib = h5p_libraries.objects.filter(library_id=request.POST['main_library_id']).values(
@@ -155,8 +160,8 @@ def h5pLoad(request):
         request.GET['filtered'] = content['filtered']
         request.GET['disable'] = content['disable']
         request.GET['h5p_slug'] = content['slug']
-        request.GET['community_id'] = content['community_name']
-        request.GET['community_name'] = content['community_name']
+        # request.GET['community_id'] = content['community_id']
+        # request.GET['community_name'] = content['community_name']
 
 
 def h5pView(request):
