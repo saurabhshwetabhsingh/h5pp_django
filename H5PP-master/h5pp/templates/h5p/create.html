@@ -119,19 +119,13 @@
 			{{form.h5p_library}}
 			<br>
 			<div class="file-container editor">
-				<label for="id_h5p" tabindex="0"><b>Upload H5P Package</b></label>
 				{{ form.h5p }}
-				<!-- <div class="form-group custom-file">
-    		<label for="id_h5p">Upload H5P Package</label>
-    		<input type="file" name ="article_image" class="file" data-msg-placeholder="Select h5p content for upload...">
-  			</div> -->
+				<label for="id_h5p" class="btn btn-default upload-h5p" tabindex="0">Upload H5P Package</label>
 			</div>
 			<p class="file-return"></p>
 			{% if not request.GET.contentId %}
-			<!-- <p>ch1.................</p> -->
 				<input class="btn btn-primary" type="submit" id="submit_editor" value="Save">
 			{% else %}
-			<!-- <p>cn2;;;;;;;;;;;;;;;;;;;;</p> -->
 				<input class="btn btn-primary" type="submit" id="submit_editor" value="Save">
 			{% endif %}
 			{% if form.non_field_errors %}
