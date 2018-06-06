@@ -1,79 +1,81 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Bild"
+      "label":"Bild"
     },
     {
-      "label": "Alternativtext",
-      "description": "Erforderlich. Falls das Bild nicht geladen werden kann, wird dieser Text stattdessen angezeigt. Wird auch von \"Readspeakers\" genutzt."
+      "label":"Alternativtext",
+      "description":"Erforderlich. Falls das Bild nicht geladen werden kann, wird dieser Text stattdessen angezeigt. Wird auch von \"Readspeakers\" genutzt."
     },
     {
-      "label": "Hover-Text",
-      "description": "Optional. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Bild schwebt."
+      "label":"Hover-Text",
+      "description":"Optional. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Bild schwebt."
     },
     {
-      "label": "Urheberrechtsangaben",
-      "fields": [
+      "label":"Urheberrechtsangaben",
+      "fields":[
         {
-          "label": "Titel",
-          "placeholder": "La Gioconda"
+          "label":"Titel",
+          "placeholder":"La Gioconda"
         },
         {
-          "label": "Autor",
-          "placeholder": "Leonardo da Vinci"
+          "label":"Autor",
+          "placeholder":"Leonardo da Vinci"
         },
         {
-          "label": "Quelle",
-          "placeholder": "http://en.wikipedia.org/wiki/Mona_Lisa",
-          "regexp": {}
+          "label":"Quelle",
+          "placeholder":"http://en.wikipedia.org/wiki/Mona_Lisa",
+          "regexp":{
+            
+          }
         },
         {
-          "label": "Lizenz",
-          "default": "U",
-          "options": [
+          "label":"Lizenz",
+          "default":"U",
+          "options":[
             {
-              "label": "Unbestimmt"
+              "label":"Unbestimmt"
             },
             {
-              "label": "Namensnennung (CC BY)"
+              "label":"Namensnennung (CC BY)"
             },
             {
-              "label": "Namensnennung-Weitergabe unter gleichen Bedingungen (CC BY-SA)"
+              "label":"Namensnennung-Weitergabe unter gleichen Bedingungen (CC BY-SA)"
             },
             {
-              "label": "Namensnennung-KeineBearbeitung (CC BY-ND)"
+              "label":"Namensnennung-KeineBearbeitung (CC BY-ND)"
             },
             {
-              "label": "Namensnennung-NichtKommerziell (CC BY-NC)"
+              "label":"Namensnennung-NichtKommerziell (CC BY-NC)"
             },
             {
-              "label": "Namensnennung-NichtKommerziell-Weitergabe unter gleichen Bedingungen (CC BY-NC-SA)"
+              "label":"Namensnennung-NichtKommerziell-Weitergabe unter gleichen Bedingungen (CC BY-NC-SA)"
             },
             {
-              "label": "Namensnennung-NichtKommerziell-KeineBearbeitung (CC BY-NC-ND)"
+              "label":"Namensnennung-NichtKommerziell-KeineBearbeitung (CC BY-NC-ND)"
             },
             {
-              "label": "General Public License"
+              "label":"General Public License"
             },
             {
-              "label": "Gemeinfrei (Public Domain)"
+              "label":"Gemeinfrei (Public Domain)"
             },
             {
-              "label": "Public Domain Dedication and Licence"
+              "label":"Public Domain Dedication and Licence"
             },
             {
-              "label": "Public Domain Mark"
+              "label":"Public Domain Mark"
             },
             {
-              "label": "keine freien Nutzungsrechte"
+              "label":"keine freien Nutzungsrechte"
             }
           ]
         }
       ]
     },
     {
-      "label": "Name des Bildinhalts",
-      "default": "Bild"
+      "label":"Name des Bildinhalts",
+      "default":"Image"
     }
   ]
 }

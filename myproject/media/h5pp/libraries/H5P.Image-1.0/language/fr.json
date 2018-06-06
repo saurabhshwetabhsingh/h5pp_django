@@ -1,73 +1,81 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Image"
+      "label":"Image"
     },
     {
-      "label": "Texte alternatif",
-      "description": "Obligatoire. Ce texte sera affiché si l'image n'apparaît pas dans le navigateur."
+      "label":"Texte alternatif",
+      "description":"Obligatoire. Ce texte sera affiché si l'image n'apparaît pas dans le navigateur."
     },
     {
-      "label": "Texte de survol",
-      "description": "Optionnel. Ce texte est affiché quand la souris survole une image."
+      "label":"Texte de survol",
+      "description":"Optionnel. Ce texte est affiché quand la souris survole une image."
     },
     {
-      "label": "Informations sur le Copyright",
-      "fields": [
+      "label":"Informations sur le Copyright",
+      "fields":[
         {
-          "label": "Titre"
+          "label":"Titre",
+          "placeholder":"La Gioconda"
         },
         {
-          "label": "Auteur"
+          "label":"Auteur",
+          "placeholder":"Leonardo da Vinci"
         },
         {
-          "label": "Source"
+          "label":"Source",
+          "placeholder":"http://en.wikipedia.org/wiki/Mona_Lisa",
+          "regexp":{
+            
+          }
         },
         {
-          "label": "Licence",
-          "options": [
+          "label":"Licence",
+          "default":"U",
+          "options":[
             {
-              "label": "Non précisé"
+              "label":"Non précisé"
             },
             {
-              "label": "Attribution"
+              "label":"Attribution"
             },
             {
-              "label": "Attribution-Partage à l'identique"
+              "label":"Attribution-Partage à l'identique"
             },
             {
-              "label": "Attribution-Pas de modifications"
+              "label":"Attribution-Pas de modifications"
             },
             {
-              "label": "Attribution-Pas d'utilisation commerciale"
+              "label":"Attribution-Pas d'utilisation commerciale"
             },
             {
-              "label": "Attribution-Pas d'utilisation commerciale-Partage à l'identique"
+              "label":"Attribution-Pas d'utilisation commerciale-Partage à l'identique"
             },
             {
-              "label": "Attribution-Pas d'utilisation commerciale-Pas de modifications"
+              "label":"Attribution-Pas d'utilisation commerciale-Pas de modifications"
             },
             {
-              "label": "GPL"
+              "label":"GPL"
             },
             {
-              "label": "Domaine public"
+              "label":"Domaine public"
             },
             {
-              "label": "Domaine public"
+              "label":"Domaine public"
             },
             {
-              "label": "Domaine public"
+              "label":"Domaine public"
             },
             {
-              "label": "Copyright"
+              "label":"Copyright"
             }
           ]
         }
       ]
     },
     {
-      "label": "Légende"
+      "label":"Légende",
+      "default":"Image"
     }
   ]
 }

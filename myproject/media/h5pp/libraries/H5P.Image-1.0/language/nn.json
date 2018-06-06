@@ -1,73 +1,81 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Biletefil"
+      "label":"Biletefil"
     },
     {
-      "label": "Alternativ tekst",
-      "description": "Viss biletet ikkje kan lastas visast denne teksten i istadenfor. Denne blir og nytta ved talesyntese."
+      "label":"Alternativ tekst",
+      "description":"Viss biletet ikkje kan lastas visast denne teksten i istadenfor. Denne blir og nytta ved talesyntese."
     },
     {
-      "label": "Sveve-tekst",
-      "description": "Denne teksten visast når brukaren held peikeeininga over bilete. Kan til dømes brukast til å informere om opphav."
+      "label":"Sveve-tekst",
+      "description":"Denne teksten visast når brukaren held peikeeininga over bilete. Kan til dømes brukast til å informere om opphav."
     },
     {
-      "label": "Informasjon om opphavsrett",
-      "fields": [
+      "label":"Informasjon om opphavsrett",
+      "fields":[
         {
-          "label": "Tittel"
+          "label":"Tittel",
+          "placeholder":"La Gioconda"
         },
         {
-          "label": "Opphavsmann"
+          "label":"Opphavsmann",
+          "placeholder":"Leonardo da Vinci"
         },
         {
-          "label": "Kjelde"
+          "label":"Kjelde",
+          "placeholder":"http://en.wikipedia.org/wiki/Mona_Lisa",
+          "regexp":{
+            
+          }
         },
         {
-          "label": "Lisens",
-          "options": [
+          "label":"Lisens",
+          "default":"U",
+          "options":[
             {
-              "label": "Ukjent"
+              "label":"Ukjent"
             },
             {
-              "label": "Namngjeving"
+              "label":"Namngjeving"
             },
             {
-              "label": "Namngjeving - Del på same vilkår"
+              "label":"Namngjeving - Del på same vilkår"
             },
             {
-              "label": "Namngjeving - Inga bearbeiding"
+              "label":"Namngjeving - Inga bearbeiding"
             },
             {
-              "label": "Namngjeving - Ikkje kommersiell"
+              "label":"Namngjeving - Ikkje kommersiell"
             },
             {
-              "label": "Namngjeving - Ikkje kommersiell - Del på same vilkår"
+              "label":"Namngjeving - Ikkje kommersiell - Del på same vilkår"
             },
             {
-              "label": "Namngjeving - Ikkje kommersiell - Inga bearbeiding"
+              "label":"Namngjeving - Ikkje kommersiell - Inga bearbeiding"
             },
             {
-              "label": "Generell offentleg lisens"
+              "label":"Generell offentleg lisens"
             },
             {
-              "label": "Offentleg eigedom"
+              "label":"Offentleg eigedom"
             },
             {
-              "label": "Offentleg eigedom engasjement og lisens"
+              "label":"Offentleg eigedom engasjement og lisens"
             },
             {
-              "label": "Offentleg eigedom merke"
+              "label":"Offentleg eigedom merke"
             },
             {
-              "label": "Opphavsrett"
+              "label":"Opphavsrett"
             }
           ]
         }
       ]
     },
     {
-      "label": "Innhaldsnamn for bilete"
+      "label":"Innhaldsnamn for bilete",
+      "default":"Image"
     }
   ]
 }
