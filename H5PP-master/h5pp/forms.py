@@ -161,8 +161,7 @@ class CreateForm(forms.Form):
                         'Impossible to create the content')
 
                 return content['id']
-
-        return self.cleaned_data
+        return self.cleaned_data    
 
     def getJsonContent(self):
         if 'json_content' in self.request.GET or 'translation_source' in self.request.GET and 'json_content' in self.request.GET['translation_source']:
