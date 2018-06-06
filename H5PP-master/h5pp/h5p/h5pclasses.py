@@ -392,17 +392,17 @@ class H5PDjango:
     def insertContent(self, content, contentMainId=None):
         # Insert
         result = h5p_contents.objects.create(
-            title=content['title'],
-            json_contents=content['params'],
+            title=content['title'] if 'title' in content else '',
+            json_contents=content['params'] if 'params' in content else '',
             embed_type='div',
             content_type=content['library']['machineName'],
             main_library_id=content['library']['libraryId'],
-            author=content['author'],
-            disable=content['disable'],
+            author=content['author'] if 'author' in content else '',
+            disable=content['disable'] if 'disable' in content else '',
             filtered='',
             slug=slugify(content['title']),
-            community_id = content['community_id'],
-            community_name = content['community_name']
+            community_id = content['community_id'] if 'community_id' in content else '',
+            community_name = content['community_name'] if 'community_name' in content else ''
             )
 
         event = H5PEvent('content', 'create', result.content_id, content['title'] if 'title' in content else '', content[
