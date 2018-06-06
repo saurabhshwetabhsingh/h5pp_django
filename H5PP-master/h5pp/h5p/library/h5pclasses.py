@@ -629,6 +629,15 @@ class H5PStorage:
 
             if "title" in options:
                 content["title"] = options["title"]
+            
+            if "author" in options:
+                content["author"] = options["author"]
+            
+            if "community_id" in options:
+                content["community_id"] = options["community_id"]
+            
+            if "community_name" in options:
+                content["community_name"] = options["community_name"]
 
             contentId = self.h5pC.saveContent(content, contentMainId)
 
