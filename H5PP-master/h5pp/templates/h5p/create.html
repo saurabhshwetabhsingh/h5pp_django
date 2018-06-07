@@ -1,5 +1,6 @@
 {% extends "h5p/base.html" %}
 {% load static %}
+{% load widget_tweaks %}
 {% block head %}
 	<title>H5PP - Editor</title>
 	{% if request.GET.title %}
@@ -8,9 +9,15 @@
 				display: none;
 				background-color: #eee;
 			}
-
 		</style>
 	{% endif %}
+
+		<style>
+			
+			label{
+			color: #e94e2f;
+			}
+		</style>
 	<style type="text/css" media="all">
 	{% for style in data.coreAssets.css %}
 		@import url("{% static style %}");
@@ -27,9 +34,13 @@
 	</script>
 	<script>
 		window.onload = function() {
+			// document.getElementById('id_h5p_type_0').checked = true;
+
+
 			document.getElementById('id_h5p_type_0').onclick = function() {
 				document.getElementsByTagName('label')[4].style.display = 'inline-block';
-				document.getElementById('id_h5p').style.display = '';
+				document.getElementById('id_h5p').style.display = 'inline-block';
+				document.getElementsByClassName('ercheck1')[0].style.display = 'none';
 				document.getElementsByTagName('label')[3].style.display = 'none';
 				document.getElementsByClassName('h5p-editor-iframe')[0].style.display = 'none'
 			}
@@ -60,57 +71,32 @@
 		}
 	</script>
 {% endblock head %}
-<!-- {% block css %}
+{% block css %}
 <link href="{% static 'css/fileinput.min.css' %}" rel="stylesheet">
-{% endblock %} -->
+{% endblock %}
 {% block breadcrumb %}
-<!-- {% if request.POST.articleof == "group" %}
-  <li class="breadcrumb-item active"><a href="{% url 'group_view' group.pk %}">{{group.name}} Group</a></li>
-{% endif %}
-{% if request.POST.articleof == "community" %}
-  <li class="breadcrumb-item active"><a href="{% url 'community_view' community.pk %}">{{community.name}} Community</a></li>
-{% endif %} -->
+  <li class="breadcrumb-item active"><a href="#">{{ form.community_name }} Communities</a></li>
   <li class="breadcrumb-item active">Create a H5P Content</li>
 {% endblock %}
 {% block content %}
 <div class="">
-	{% if not request.GET.is_iframe %}
-		<!-- <a href="{% url 'h5plistContents' %}"><span class="glyphicon glyphicon-arrow-left"></span> List of contents</a> -->
-		<!-- <h1 class="page-title">Editor</h1> -->
-	{% endif %}
 	<div class="form-group">
-		<!-- {% if not request.GET.is_iframe %}
-
-			{% if not request.GET.title %}
-				<h4 class="section-title">Create new content</h4>
-				<div class="alert alert-success info">
-					<p>You can create or upload content with this editor :</p>
-						<ul><li><b>Create </b>: Start by giving it a <i>title</i>. Select <i>create</i> and choose a content type from the dropdown list.
-						The number of content types depends on the libraries installed.<br>If a tutorial is available for this content you can access to it (label <i>Tutorial available</i>)</li>
-
-						<li><b>Upload </b>: Start by giving it a <i>title</i>. Select <i>upload</i> and click on <i>Upload H5P Package</i> to upload your content. The content must be a <i>.h5p</i> file.</li></ul>
-
-					<p>When you're done, click on the <b>Save</b> button. You will be redirected to the viewing page of your content.</p>
-				</div>
-			{% else %}
-				<h4 class="section-title">{{request.GET.title}}</h4>
-				<div class="alert alert-success info">
-					<p>You can edit your content with this editor :</p>
-						<ul><li><b>Edit </b>: You can change the <i>title</i> and the <i>content type</i>. If your content is a <i>interactive video</i>, users will be notified of changes made in your video when they watch it again.</li>
-
-						<li><b>Delete </b>: To delete a content you must go to the <a href="{% url 'h5plistContents' %}">contents page</a></li></ul>
-
-					<p>When you're done, click on the <b>Save</b> button. You will be redirected to the viewing page of your content.</p>
-				</div>
-			{% endif %}
-		{% endif %} -->
 		<form method="post" enctype="multipart/form-data" id="h5p-content-form">
 			{% csrf_token %}
 			<label for="id_title" class="label_form"><b>Title</b></label>
-			{{form.title}}
+			{% render_field form.title class="form-control" placeholder="Give a title to the content" %}
+			{{ form.community_name }} 
+			<br>
 			<div class="radio form-check">
-				<b>Action</b>
-				{{form.h5p_type}}
+				<b style="color:#e94e2f;">Action</b>
+				{% render_field form.h5p_type %}
+				<style>
+					#id_h5p_type{
+						list-style: none;
+						padding-left: 15px;
+						padding-right: 15px;
+					}
+				</style>
 			</div>
 			<label for="h5p-editor-iframe" class="label_form">Content type editor :</label>
 			<div class="h5p-editor">Waiting for javascript...</div>
@@ -119,23 +105,41 @@
 			{{form.h5p_library}}
 			<br>
 			<div class="file-container editor">
-				{{ form.h5p }}
-				<label for="id_h5p" class="btn btn-default upload-h5p" tabindex="0">Upload H5P Package</label>
+					<label for="id_h5p" class="btn btn-primary upload-h5p ercheck" tabindex="0">
+						Upload H5P Package
+						{% render_field form.h5p class="ercheck1" data-msg-placeholder="Select h5p content for upload..." style="display:none;" %}
+					</label>
 			</div>
 			<p class="file-return"></p>
+			<br>
 			{% if not request.GET.contentId %}
 				<input class="btn btn-primary" type="submit" id="submit_editor" value="Save">
 			{% else %}
 				<input class="btn btn-primary" type="submit" id="submit_editor" value="Save">
 			{% endif %}
 			{% if form.non_field_errors %}
-				<div class="alert alert-danger">
-						<p>
-							{{ form.non_field_errors }}
-						</p>
-				</div>
+			<div class="alert alert-danger">
+					<p>
+								{{ form.non_field_errors }}
+					</p>
+			</div>
 			{% endif %}
 		</form>
 	</div>
 </div>
+	<script>
+	document.getElementsByClassName("form-group")[0].getElementsByTagName("ul")[0].classList.add("row");
+	document.getElementsByClassName("form-group")[0].getElementsByTagName("li")[0].classList.add("form-control", "col-lg-6");
+	document.getElementsByClassName("form-group")[0].getElementsByTagName("li")[0].style.borderBottom = "0px solid #ccc";
+	document.getElementsByClassName("form-group")[0].getElementsByTagName("li")[0].style.color = "#000";
+	document.getElementsByClassName("form-group")[0].getElementsByTagName("li")[1].style.color = "#000";
+	document.getElementsByClassName("form-group")[0].getElementsByTagName("li")[1].classList.add("form-control", "col-lg-6");
+	</script>
+	<script src="{% static 'js/jquery-3.2.1.min.js'  %}"></script>
+	<script src="{% static 'js/bootstrap_fileinput/piexif.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap_fileinput/purify.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap_fileinput/sortable.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap_fileinput/fileinput.min.js' %}">
+	</script>
 {% endblock content %}
+

@@ -47,6 +47,7 @@ def createView(request, contentId=None):
             request.POST['community_id'] = request.session['cid']
             cid = request.session['cid']
             request.POST['community_name'] = request.session['cname']
+            # cname = request.session['cname']
             del request.session['cid']
             del request.session['cname']
             form = CreateForm(request, request.POST, request.FILES)

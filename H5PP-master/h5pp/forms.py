@@ -87,7 +87,7 @@ CHOICES = [('upload', 'Upload'),
 class CreateForm(forms.Form):
     title = forms.CharField(label='Title ')
     h5p_type = forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect())
-    h5p = forms.FileField(label='HTML 5 Package ', help_text='Select a .h5p file to upload and create interactive content from. You may start with the <a href="http://h5p.org/content-types-and-applications" target="_blank">example files</a> on H5P.org', required=False)
+    h5p = forms.FileField(label='HTML 5 Package ', required=False)
     json_content = forms.CharField(widget=forms.HiddenInput())
     community_id = forms.CharField(widget=forms.HiddenInput())
     community_name = forms.CharField(widget=forms.HiddenInput())

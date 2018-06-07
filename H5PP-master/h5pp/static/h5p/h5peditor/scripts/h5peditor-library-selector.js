@@ -84,7 +84,7 @@ ns.LibrarySelector = function (libraries, defaultLibrary, defaultParams) {
     that.$tutorialUrl.attr('href', tutorialUrl).toggle(tutorialUrl !== undefined && tutorialUrl !== null && tutorialUrl.length !== 0);
   };
 
-  this.$selector = ns.$('<select name="h5peditor-library" title="' + ns.t('core', 'selectLibrary') + '">' + options + '</select>').change(function () {
+  this.$selector = ns.$('<select name="h5peditor-library" style="padding: 7px; background-color: #eee; border-radius: 5px; outline: 0px;"title="' + ns.t('core', 'selectLibrary') + '">' + options + '</select>').change(function () {
     // Use timeout to avoid bug in Chrome >44, when confirm is used inside change event.
     // Ref. https://code.google.com/p/chromium/issues/detail?id=525629
     setTimeout(function () {
@@ -110,7 +110,7 @@ ns.LibrarySelector.prototype.appendTo = function ($element) {
   this.$selector.appendTo($element);
   this.$tutorialUrl.appendTo($element);
 
-  $element.append('<div class="h5p-more-libraries">' + ns.t('core', 'moreLibraries') + '</div>');
+  // $element.append('<div class="h5p-more-libraries">' + ns.t('core', 'moreLibraries') + '</div>');
 };
 
 /**
